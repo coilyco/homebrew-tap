@@ -1,70 +1,70 @@
 class Aos < Formula
   desc "Agent runtime composition root for Agentic OS"
   homepage "https://forgejo.coilysiren.me/coilyco-flight-deck/agentic-os"
-  version "0.154.0"
+  version "0.155.0"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://forgejo.coilysiren.me/coilyco-flight-deck/agentic-os/releases/download/aos-v0.154.0/aos-darwin-arm64"
-      sha256 "53b69f4a298bb3259a316f4bf4669b42d7c91b0b1f848facafba550bdf3d5eaf"
+      url "https://forgejo.coilysiren.me/coilyco-flight-deck/agentic-os/releases/download/aos-v0.155.0/aos-darwin-arm64"
+      sha256 "7b1fdb1d451e988bb441dda2df17cda677c505a4d6486792dedb3bbe76bec7d1"
       resource "aoscompose" do
-        url "https://forgejo.coilysiren.me/coilyco-flight-deck/agentic-os/releases/download/aos-v0.154.0/aoscompose-darwin-arm64"
-        sha256 "53b69f4a298bb3259a316f4bf4669b42d7c91b0b1f848facafba550bdf3d5eaf"
+        url "https://forgejo.coilysiren.me/coilyco-flight-deck/agentic-os/releases/download/aos-v0.155.0/aoscompose-darwin-arm64"
+        sha256 "7b1fdb1d451e988bb441dda2df17cda677c505a4d6486792dedb3bbe76bec7d1"
       end
       resource "aosward" do
-        url "https://forgejo.coilysiren.me/coilyco-flight-deck/agentic-os/releases/download/aos-v0.154.0/aosward-darwin-arm64"
-        sha256 "53b69f4a298bb3259a316f4bf4669b42d7c91b0b1f848facafba550bdf3d5eaf"
+        url "https://forgejo.coilysiren.me/coilyco-flight-deck/agentic-os/releases/download/aos-v0.155.0/aosward-darwin-arm64"
+        sha256 "7b1fdb1d451e988bb441dda2df17cda677c505a4d6486792dedb3bbe76bec7d1"
       end
       resource "aosguard" do
-        url "https://forgejo.coilysiren.me/coilyco-flight-deck/agentic-os/releases/download/aos-v0.154.0/aosguard-darwin-arm64"
-        sha256 "062a82777054974f9e2e3de31c5fcc7cefd198e10ef5d0de59e9bf0e172d08ca"
+        url "https://forgejo.coilysiren.me/coilyco-flight-deck/agentic-os/releases/download/aos-v0.155.0/aosguard-darwin-arm64"
+        sha256 "8517f7bcb047fa054700934eb5c08e8949d833f7feda0e431ea171f815b7e9fd"
       end
       resource "agent-terminal" do
-        url "https://forgejo.coilysiren.me/coilyco-flight-deck/agentic-os/releases/download/aos-v0.154.0/agent-terminal-darwin-arm64"
-        sha256 "1dc11be3614be783da6d101bf85a89d5b376c20e26d91223fe16c991adc1b631"
+        url "https://forgejo.coilysiren.me/coilyco-flight-deck/agentic-os/releases/download/aos-v0.155.0/agent-terminal-darwin-arm64"
+        sha256 "4c8f639a5c97f75269a49fd67ebb5ed2cb19ef5f7cad73754f2b7b1843f8fea8"
       end
     end
   end
   on_linux do
     on_intel do
-      url "https://forgejo.coilysiren.me/coilyco-flight-deck/agentic-os/releases/download/aos-v0.154.0/aos-linux-amd64"
-      sha256 "4123d5764ff962ff0180c646e45fa2cff89d96de4fd8c60ef37c01b9fb3bb477"
+      url "https://forgejo.coilysiren.me/coilyco-flight-deck/agentic-os/releases/download/aos-v0.155.0/aos-linux-amd64"
+      sha256 "efea8deabf99f9774c05a337ba4d1d12af1068c3c6daf022c97f2747af29f8a7"
       resource "aoscompose" do
-        url "https://forgejo.coilysiren.me/coilyco-flight-deck/agentic-os/releases/download/aos-v0.154.0/aoscompose-linux-amd64"
-        sha256 "4123d5764ff962ff0180c646e45fa2cff89d96de4fd8c60ef37c01b9fb3bb477"
+        url "https://forgejo.coilysiren.me/coilyco-flight-deck/agentic-os/releases/download/aos-v0.155.0/aoscompose-linux-amd64"
+        sha256 "efea8deabf99f9774c05a337ba4d1d12af1068c3c6daf022c97f2747af29f8a7"
       end
       resource "aosward" do
-        url "https://forgejo.coilysiren.me/coilyco-flight-deck/agentic-os/releases/download/aos-v0.154.0/aosward-linux-amd64"
-        sha256 "4123d5764ff962ff0180c646e45fa2cff89d96de4fd8c60ef37c01b9fb3bb477"
+        url "https://forgejo.coilysiren.me/coilyco-flight-deck/agentic-os/releases/download/aos-v0.155.0/aosward-linux-amd64"
+        sha256 "efea8deabf99f9774c05a337ba4d1d12af1068c3c6daf022c97f2747af29f8a7"
       end
       resource "aosguard" do
-        url "https://forgejo.coilysiren.me/coilyco-flight-deck/agentic-os/releases/download/aos-v0.154.0/aosguard-linux-amd64"
-        sha256 "cd6d62086926c5745e384a9550005ca9088dfab5c77d6e192fc2a46f7a8e1be9"
+        url "https://forgejo.coilysiren.me/coilyco-flight-deck/agentic-os/releases/download/aos-v0.155.0/aosguard-linux-amd64"
+        sha256 "9778eb4fb280ad2cf8375fee0119c3ee590f1a93cc9d2cadc7f98067262dfd8e"
       end
       resource "agent-terminal" do
-        url "https://forgejo.coilysiren.me/coilyco-flight-deck/agentic-os/releases/download/aos-v0.154.0/agent-terminal-linux-amd64"
-        sha256 "048bb156db8cdee9b324b4ed9d1af3ff0ae1e17edb813907e90cdc77241068ab"
+        url "https://forgejo.coilysiren.me/coilyco-flight-deck/agentic-os/releases/download/aos-v0.155.0/agent-terminal-linux-amd64"
+        sha256 "c32e6b388ee9157f227e6e38defa7fe6ed08655bcee8712ecc8da705b7fb08f5"
       end
     end
     on_arm do
-      url "https://forgejo.coilysiren.me/coilyco-flight-deck/agentic-os/releases/download/aos-v0.154.0/aos-linux-arm64"
-      sha256 "40f23626f30abff5d7be2e7eba46ac6678f21abcd532c159cc51076854ded83a"
+      url "https://forgejo.coilysiren.me/coilyco-flight-deck/agentic-os/releases/download/aos-v0.155.0/aos-linux-arm64"
+      sha256 "ab408b75f97639bcb07c120d08760da5f899405d86529485b3fff672548ab4ab"
       resource "aoscompose" do
-        url "https://forgejo.coilysiren.me/coilyco-flight-deck/agentic-os/releases/download/aos-v0.154.0/aoscompose-linux-arm64"
-        sha256 "40f23626f30abff5d7be2e7eba46ac6678f21abcd532c159cc51076854ded83a"
+        url "https://forgejo.coilysiren.me/coilyco-flight-deck/agentic-os/releases/download/aos-v0.155.0/aoscompose-linux-arm64"
+        sha256 "ab408b75f97639bcb07c120d08760da5f899405d86529485b3fff672548ab4ab"
       end
       resource "aosward" do
-        url "https://forgejo.coilysiren.me/coilyco-flight-deck/agentic-os/releases/download/aos-v0.154.0/aosward-linux-arm64"
-        sha256 "40f23626f30abff5d7be2e7eba46ac6678f21abcd532c159cc51076854ded83a"
+        url "https://forgejo.coilysiren.me/coilyco-flight-deck/agentic-os/releases/download/aos-v0.155.0/aosward-linux-arm64"
+        sha256 "ab408b75f97639bcb07c120d08760da5f899405d86529485b3fff672548ab4ab"
       end
       resource "aosguard" do
-        url "https://forgejo.coilysiren.me/coilyco-flight-deck/agentic-os/releases/download/aos-v0.154.0/aosguard-linux-arm64"
-        sha256 "fbe51de8dc14860075befe36a5835d7252ceb71a403e18da02a10ad2c98a40be"
+        url "https://forgejo.coilysiren.me/coilyco-flight-deck/agentic-os/releases/download/aos-v0.155.0/aosguard-linux-arm64"
+        sha256 "c2922c7ab55720b00d4d15796857e21044ee8a08c38e16a4be1162e6a8de916c"
       end
       resource "agent-terminal" do
-        url "https://forgejo.coilysiren.me/coilyco-flight-deck/agentic-os/releases/download/aos-v0.154.0/agent-terminal-linux-arm64"
-        sha256 "0a0e7645110c8796af53b1056717278a4a5258dcef5c1449e691dab554f6c55e"
+        url "https://forgejo.coilysiren.me/coilyco-flight-deck/agentic-os/releases/download/aos-v0.155.0/agent-terminal-linux-arm64"
+        sha256 "9ea852ec3a1b39dd2c5be4856a82ad25eb01b298212aa7ad7bcc4775bc3184f2"
       end
     end
   end
