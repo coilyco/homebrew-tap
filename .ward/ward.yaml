@@ -8,6 +8,9 @@ commands:
     run: brew audit --strict --tap coilyco-flight-deck/tap
     description: Run brew audit --strict against every formula in this tap.
 
+agent:
+  workflow: merge-remote-main
+
 # Catalog metadata for the cross-repo knowledge graph.
 catalog:
   kind: Component
