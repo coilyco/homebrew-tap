@@ -1,27 +1,27 @@
 class Specgen < Formula
   desc "Generate guarded CLIs from KDL policy and committed API locks"
   homepage "https://forgejo.coilysiren.me/coilyco-flight-deck/cli-guard"
-  version "0.133.0"
+  version "0.134.0"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://forgejo.coilysiren.me/coilyco-flight-deck/cli-guard/releases/download/v0.133.0/specgen-darwin-amd64"
-      sha256 "2d5e74b65efec56d911fe68b63b9b33a579e5647d5107715d41a7b7ba548f35f"
+      url "https://forgejo.coilysiren.me/coilyco-flight-deck/cli-guard/releases/download/v0.134.0/specgen-darwin-amd64"
+      sha256 "5fd317e76bd1774312c197d196aa3cc710879d74b1f391bec7aa8e37ac9d3859"
     end
     on_arm do
-      url "https://forgejo.coilysiren.me/coilyco-flight-deck/cli-guard/releases/download/v0.133.0/specgen-darwin-arm64"
-      sha256 "a056c13dffb04560328f70e8320de289ac35055395f831cca6237984935b18c0"
+      url "https://forgejo.coilysiren.me/coilyco-flight-deck/cli-guard/releases/download/v0.134.0/specgen-darwin-arm64"
+      sha256 "fc4339763b10643f80bef889adce462725ecad7a255d189f0dfb4c684d6804e5"
     end
   end
   on_linux do
     on_intel do
-      url "https://forgejo.coilysiren.me/coilyco-flight-deck/cli-guard/releases/download/v0.133.0/specgen-linux-amd64"
-      sha256 "dfe4b2dc410919f98b5885572bceba33140deeed3ab676ddc4f0a74c3118c4c0"
+      url "https://forgejo.coilysiren.me/coilyco-flight-deck/cli-guard/releases/download/v0.134.0/specgen-linux-amd64"
+      sha256 "94e646b0431617b06694f39635195d86426eb1b736a85cec11671af93733930e"
     end
     on_arm do
-      url "https://forgejo.coilysiren.me/coilyco-flight-deck/cli-guard/releases/download/v0.133.0/specgen-linux-arm64"
-      sha256 "a550923878cdf38e402445148d0f92663955ceaaacc97c35bdcea3ea88e4f6ff"
+      url "https://forgejo.coilysiren.me/coilyco-flight-deck/cli-guard/releases/download/v0.134.0/specgen-linux-arm64"
+      sha256 "6c2929500cb5d36fce65e4cbe0b3d2382637aeba63a9169773f5d8ad6fea0932"
     end
   end
 
