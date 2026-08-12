@@ -37,6 +37,15 @@ Anything privileged routes through `ward` (contributor verbs: exec/git/pkg/audit
 
 Route every dev command through ward, which reads [`.ward/ward.yaml`](.ward/ward.yaml). Add new verbs to that file before invoking them.
 
+## Checkout residency
+
+This repo is not in Agent Compose's `repository-plan.yaml`, so it has no
+resident checkout under `~/projects/<owner>/`. That is intentional. Work it
+from a task-scoped temporary clone, and remove that clone once the work lands.
+
+A temporary root can be purged at any time, so commit and push before pausing,
+switching tasks, or ending a session. The remote is the only durable artifact.
+
 ## See also
 
 - [README.md](README.md) - human-facing intro and install steps.
