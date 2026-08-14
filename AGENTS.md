@@ -1,3 +1,7 @@
+---
+ward:
+  workflow: merge-remote-main
+---
 # Agent instructions for `coilyco-flight-deck/homebrew-tap`
 
 Orientation for fresh Claude / mobile sessions. Keep this short.
