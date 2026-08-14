@@ -13,11 +13,6 @@ agent:
 
 # Catalog metadata for the cross-repo knowledge graph.
 catalog:
-  kind: Component
-  type: configuration
-  system: ops
-  owner: kai
-  lifecycle: production
   description: "Centralized Homebrew tap for coilyco-flight-deck tools."
   dependsOn:
     - coilyco-flight-deck/ward
