@@ -31,10 +31,10 @@ own and is only ever the write target.
 
 [.forgejo/workflows/ci.yml](../.forgejo/workflows/ci.yml) is the tap audit
 surface. The dev-base image ships no Homebrew, so it runs Ruby syntax checks
-across `Formula/*.rb` pending a move to `ward exec audit`.
+across `Formula/*.rb` pending a move to `just audit`.
 
 ## See also
 
 - [README.md](../README.md) - human-facing intro and quickstart.
 - [AGENTS.md](../AGENTS.md) - agent-facing operating rules.
-- [.ward/ward.yaml](../.ward/ward.yaml) - allowlisted commands.
+- [justfile](../justfile) - dev verbs, and [.ward/ward.yaml](../.ward/ward.yaml) - catalog metadata only.

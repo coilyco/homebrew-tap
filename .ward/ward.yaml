@@ -1,13 +1,9 @@
-# Per-repo command allowlist for homebrew-tap. The repo is just Formula/
-# files written by upstream release pipelines. No local dev verbs beyond
-# `brew audit`, present so ward's repocfg loader recognizes the repo and
-# the lockdown discipline is uniform. The catalog block below feeds the
-# cross-repo knowledge graph.
-
-commands:
-  audit:
-    run: brew audit --strict --tap coilyco-flight-deck/tap
-    description: Run brew audit --strict against every formula in this tap.
+# Catalog metadata for the cross-repo knowledge graph.
+#
+# Dev verbs used to live here as a `commands:` block. They are recipes in the
+# justfile now. This file survives only because check_catalog_block pins this
+# exact path and catalog-trifecta wants README, AGENTS, and FEATURES to link
+# it, both upstream in agentic-os.
 
 catalog:
   description: "Centralized Homebrew tap for coilyco-flight-deck tools."

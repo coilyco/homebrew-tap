@@ -26,11 +26,12 @@ An upstream repo cuts a tag, then its release pipeline rewrites the matching for
 
 ## Commands
 
-Dev commands are declared in [`.ward/ward.yaml`](.ward/ward.yaml). Route them through ward, not bare `brew`.
+Dev commands are declared in the [`justfile`](justfile). Route them through just, not bare `brew`.
 
 ## See also
 
 - [AGENTS.md](AGENTS.md) - agent-facing operating rules.
 - [docs/FEATURES.md](docs/FEATURES.md) - inventory of what ships today.
 - [docs/homebrew-build.md](docs/homebrew-build.md) - build-time notes (GOPROXY bypass).
-- [.ward/ward.yaml](.ward/ward.yaml) - allowlisted commands.
+- [justfile](justfile) - dev verbs.
+- [.ward/ward.yaml](.ward/ward.yaml) - catalog metadata only.

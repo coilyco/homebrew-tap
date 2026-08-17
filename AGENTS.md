@@ -66,7 +66,7 @@ actor in every action sentence.
 
 ## Commands
 
-Route every dev command through ward, which reads [`.ward/ward.yaml`](.ward/ward.yaml). Add new verbs to that file before invoking them.
+Route every dev command through the [`justfile`](justfile). Add new verbs to that file before invoking them.
 
 ## Checkout residency
 
@@ -81,4 +81,5 @@ switching tasks, or ending a session. The remote is the only durable artifact.
 
 - [README.md](README.md) - human-facing intro and install steps.
 - [docs/FEATURES.md](docs/FEATURES.md) - inventory of what ships today.
-- [.ward/ward.yaml](.ward/ward.yaml) - allowlisted commands. Agents route through ward, not bare `brew`.
+- [justfile](justfile) - dev verbs.
+- [.ward/ward.yaml](.ward/ward.yaml) - catalog metadata only. Agents route through ward, not bare `brew`.

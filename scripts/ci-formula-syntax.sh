@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Ruby syntax check over every formula. The dev-base image ships no Homebrew,
-# so this stands in for `ward exec audit` in CI. See docs/FEATURES.md.
+# so this stands in for `just audit` in CI. See docs/FEATURES.md.
 set -euo pipefail
 
 if ! command -v ruby >/dev/null 2>&1; then
