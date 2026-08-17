@@ -6,9 +6,11 @@ ward:
 
 Orientation for fresh Claude / mobile sessions. Keep this short.
 
-## What this repo is
+## Scope
 
 The centralized Homebrew tap for `coilyco-flight-deck/*` tools. Most `Formula/*.rb` files point at a tag + revision on their upstream forgejo repo; `Formula/ward.rb` tracks tagged release binaries instead.
+
+## Project shape
 
 Active formulae:
 
@@ -17,9 +19,14 @@ Active formulae:
 - `Formula/session-lattice.rb` - tracks `coilyco-flight-deck/session-lattice` releases.
 - `Formula/session-lattice-puller.rb` - companion service formula; pinned in lockstep with `session-lattice.rb`.
 
-## Release flow
+## Release
 
 Upstream repos cut a tag. Their release pipeline rewrites the matching formula here via the forgejo Contents API. `ward` refreshes its release-asset URLs and checksums; the other formulae still pin upstream tag + revision. Once the bump lands on `main`, `brew upgrade` picks it up. This repo holds no release pipeline of its own - it is the write target for the upstream ones.
+
+## Repo boundaries
+
+This repo is the write target for upstream release pipelines, never a source of
+one. Formula install and test logic is owned here. The version pin is not.
 
 ## Forbidden ops
 
@@ -28,9 +35,29 @@ Upstream repos cut a tag. Their release pipeline rewrites the matching formula h
 
 Editing the install/test logic of a formula (e.g. build flags, staging files) is fine. The upstream pipeline only rewrites the version-pin `url` line.
 
+## Safety
+
+Nothing privileged is hardcoded here. Formula sources are public tags and
+release assets, verified by checksum.
+
 ## Privileged ops
 
 Anything privileged routes through `ward` (contributor verbs: exec/git/pkg/audit/hook) or `ward-kdl ops` (operator surface: aws/ssm, tailscale, kubectl, forgejo). Bare `brew`, `gh`, `aws`, `kubectl`, etc. are denied by the harness.
+
+## Cross-repo contracts
+
+Upstream `coilyco-flight-deck/*` repos rewrite their own formula here through
+the forgejo Contents API. This repo never reaches back into them.
+
+## Validation
+
+Run `pre-commit run --all-files` before committing. The catalog suite is
+consumed by upstream ref and never forked.
+
+## Agent rules
+
+Use she/her for Kai. No em dashes, italics, or semicolons in prose. Name the
+actor in every action sentence.
 
 ## Git workflow
 
