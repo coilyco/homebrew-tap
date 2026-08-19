@@ -1,27 +1,27 @@
 class Specgen < Formula
   desc "Generate guarded CLIs from KDL policy and committed API locks"
   homepage "https://forgejo.coilysiren.me/coilyco-flight-deck/umbra"
-  version "0.157.0"
+  version "0.158.0"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://forgejo.coilysiren.me/coilyco-flight-deck/umbra/releases/download/v0.157.0/specgen-darwin-amd64"
-      sha256 "19f0f533d95abab314b3b172862a8057503fe2550ef956e43daca0a6ccdffa96"
+      url "https://forgejo.coilysiren.me/coilyco-flight-deck/umbra/releases/download/v0.158.0/specgen-darwin-amd64"
+      sha256 "4424d2e5942121afa7405274b97587bedc120f5fba14723382d39317dab25e52"
     end
     on_arm do
-      url "https://forgejo.coilysiren.me/coilyco-flight-deck/umbra/releases/download/v0.157.0/specgen-darwin-arm64"
-      sha256 "712730c3d32eaf58815ac3e12008f6f0393fc5bb60e05f28bc6b3ff2cb53db51"
+      url "https://forgejo.coilysiren.me/coilyco-flight-deck/umbra/releases/download/v0.158.0/specgen-darwin-arm64"
+      sha256 "9f4465c939ad85a84b51c22ac54701fc1cfe355e8303994629a5ab6624f2d95a"
     end
   end
   on_linux do
     on_intel do
-      url "https://forgejo.coilysiren.me/coilyco-flight-deck/umbra/releases/download/v0.157.0/specgen-linux-amd64"
-      sha256 "1cda4e7656d9332480a07fa8d18d61e95b10d2e0c81d6850588ebaf113ac2730"
+      url "https://forgejo.coilysiren.me/coilyco-flight-deck/umbra/releases/download/v0.158.0/specgen-linux-amd64"
+      sha256 "423b1b178f93d0d0bfee4ed12c6f4cad874753a2dc4d1fca29f61e6b5e15020c"
     end
     on_arm do
-      url "https://forgejo.coilysiren.me/coilyco-flight-deck/umbra/releases/download/v0.157.0/specgen-linux-arm64"
-      sha256 "45ca84217730082823da0830fa841003eca2d6a4a0670890aeec31a8586111ab"
+      url "https://forgejo.coilysiren.me/coilyco-flight-deck/umbra/releases/download/v0.158.0/specgen-linux-arm64"
+      sha256 "16c551a3f368eee4aa421832ffd967da23deb0548fc755b8410c4074737970d5"
     end
   end
 
