@@ -8,20 +8,22 @@ Orientation for fresh Claude / mobile sessions. Keep this short.
 
 ## Scope
 
-The centralized Homebrew tap for `coilyco-flight-deck/*` tools. Most `Formula/*.rb` files point at a tag + revision on their upstream forgejo repo; `Formula/ward.rb` tracks tagged release binaries instead.
+The centralized Homebrew tap for `coilyco-flight-deck/*` tools. Every `Formula/*.rb` file downloads and checksum-verifies tagged release binaries from its upstream forgejo repo. None builds from source.
 
 ## Project shape
 
 Active formulae:
 
-- `Formula/ward.rb` - tracks `coilyco-flight-deck/ward` releases by downloading the tagged platform binaries and verifying them.
-- `Formula/repo-recall.rb` - tracks `coilyco-flight-deck/repo-recall` releases.
-- `Formula/session-lattice.rb` - tracks `coilyco-flight-deck/session-lattice` releases.
-- `Formula/session-lattice-puller.rb` - companion service formula; pinned in lockstep with `session-lattice.rb`.
+- `Formula/ward.rb` - tracks `coilyco-flight-deck/ward` releases.
+- `Formula/specgen.rb` - tracks `specgen` releases from `coilyco-flight-deck/umbra`.
+- `Formula/agent-compose.rb` - tracks `coilyco-flight-deck/agent-compose` releases, and installs `acompose` alongside.
+- `Formula/aos.rb` - tracks `aos-v*` releases from `coilyco-flight-deck/agentic-os`, and installs `aoscompose` and `aosward` alongside.
+
+The `repo-recall`, `session-lattice`, and `session-lattice-puller` formulae are gone, because their upstream repos are archived.
 
 ## Release
 
-Upstream repos cut a tag. Their release pipeline rewrites the matching formula here via the forgejo Contents API. `ward` refreshes its release-asset URLs and checksums; the other formulae still pin upstream tag + revision. Once the bump lands on `main`, `brew upgrade` picks it up. This repo holds no release pipeline of its own - it is the write target for the upstream ones.
+Upstream repos cut a tag. Their release pipeline rewrites the matching formula here via the forgejo Contents API, refreshing the release-asset URLs and the per-platform checksums. Once the bump lands on `main`, `brew upgrade` picks it up. This repo holds no release pipeline of its own, so it is only ever the write target for the upstream ones.
 
 ## Repo boundaries
 
@@ -42,7 +44,7 @@ release assets, verified by checksum.
 
 ## Privileged ops
 
-Anything privileged routes through `ward` (contributor verbs: exec/git/pkg/audit/hook) or `ward-kdl ops` (operator surface: aws/ssm, tailscale, kubectl, forgejo). Bare `brew`, `gh`, `aws`, `kubectl`, etc. are denied by the harness.
+Repository dev verbs run through the [`justfile`](justfile). Operator verbs (aws/ssm, tailscale, kubectl, forgejo) run through `aosguard ops <area>`. Enumerate them with `aosguard ops <area> describe` rather than guessing. Bare `brew`, `gh`, `aws`, and `kubectl` are denied by the harness.
 
 ## Cross-repo contracts
 
@@ -62,7 +64,7 @@ actor in every action sentence.
 ## Git workflow
 
 - Commit to `main`, push after each commit. No PRs unless asked.
-- Canonical history lives on forgejo; the GitHub mirror (if any) stays PR-gated.
+- Canonical history lives on forgejo. The GitHub mirror, if any, stays PR-gated.
 
 ## Commands
 
