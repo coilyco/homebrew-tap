@@ -1,30 +1,30 @@
 class AgentCompose < Formula
   desc "Core Roster context composition for native agent harnesses"
   homepage "https://forgejo.coilysiren.me/coilyco-flight-deck/agent-compose"
-  version "2.90.0"
+  version "2.91.0"
   license "MIT"
 
   # The seed roster installs into the prefix. acompose prefers an editable
   # roster in the state directory, so an upgrade never overwrites one.
   resource "roster" do
-    url "https://forgejo.coilysiren.me/coilyco-flight-deck/agent-compose/releases/download/v2.90.0/agent-compose-roster.tar.gz"
-    sha256 "308159f8272477c076d7667ab8378fe08d62434bb4983ffedcf8faba97823a85"
+    url "https://forgejo.coilysiren.me/coilyco-flight-deck/agent-compose/releases/download/v2.91.0/agent-compose-roster.tar.gz"
+    sha256 "a75280b28227388abbf3de8f0d43e4311de34c7700e1c7e21724339aebd77802"
   end
 
   on_macos do
     on_arm do
-      url "https://forgejo.coilysiren.me/coilyco-flight-deck/agent-compose/releases/download/v2.90.0/agent-compose-darwin-arm64"
-      sha256 "3d897b62b5d010353d150b887593c4cb7c43d75d109f4f63ca9f965a581f7c3e"
+      url "https://forgejo.coilysiren.me/coilyco-flight-deck/agent-compose/releases/download/v2.91.0/agent-compose-darwin-arm64"
+      sha256 "0a5876a48f02285927d56aa998add5c8f7bb9c7cab7c66f2ca1483ccedf3d54e"
     end
   end
   on_linux do
     on_intel do
-      url "https://forgejo.coilysiren.me/coilyco-flight-deck/agent-compose/releases/download/v2.90.0/agent-compose-linux-amd64"
-      sha256 "be0e68ae9948a832cb9099091247fead7933462cfaeefcc79228868f188d697d"
+      url "https://forgejo.coilysiren.me/coilyco-flight-deck/agent-compose/releases/download/v2.91.0/agent-compose-linux-amd64"
+      sha256 "42ce8725cab88826f1b8adee2b3e2e23274ba2e33e64bf39d7d1e989555616ac"
     end
     on_arm do
-      url "https://forgejo.coilysiren.me/coilyco-flight-deck/agent-compose/releases/download/v2.90.0/agent-compose-linux-arm64"
-      sha256 "c6a28bc248bf88dc6b605126df42124e4462a90136a3c7076cd8178c5278d96e"
+      url "https://forgejo.coilysiren.me/coilyco-flight-deck/agent-compose/releases/download/v2.91.0/agent-compose-linux-arm64"
+      sha256 "e1a3e0a881d304148cd25b5b41c4e7ca567328b4d29a17e2eb17f746fe814aed"
     end
   end
 
