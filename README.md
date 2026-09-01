@@ -16,7 +16,7 @@ Then install whichever tools you want:
 
 ```sh
 brew install coilyco-flight-deck/tap/ward
-brew install coilyco-flight-deck/tap/specgen
+brew install coilyco-flight-deck/tap/umbra
 brew install coilyco-flight-deck/tap/agent-compose
 brew install coilyco-flight-deck/tap/aos
 ```
@@ -31,9 +31,10 @@ here. Windows users take the same tools from the sibling
   agent work in fresh least-access containers and records a durable
   issue-to-landing trail. From
   [ward](https://forgejo.coilysiren.me/coilyco-flight-deck/ward).
-- [`specgen`](Formula/specgen.rb) - generates a standalone guarded CLI from KDL
+- [`umbra`](Formula/umbra.rb) - generates a standalone guarded CLI from KDL
   policy plus a committed lock, with no hand-written Go. From
-  [umbra](https://forgejo.coilysiren.me/coilyco-flight-deck/umbra).
+  [umbra](https://forgejo.coilysiren.me/coilyco-flight-deck/umbra). Installed as
+  `specgen` before the driver took its framework's name.
 - [`agent-compose`](Formula/agent-compose.rb) - composes the role, doctrine,
   and skill context an agent harness loads. Also installs `acompose`. From
   [agent-compose](https://forgejo.coilysiren.me/coilyco-flight-deck/agent-compose).

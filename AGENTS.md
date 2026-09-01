@@ -15,7 +15,7 @@ The centralized Homebrew tap for `coilyco-flight-deck/*` tools. Every `Formula/*
 Active formulae:
 
 - `Formula/ward.rb` - tracks `coilyco-flight-deck/ward` releases.
-- `Formula/specgen.rb` - tracks `specgen` releases from `coilyco-flight-deck/umbra`.
+- `Formula/umbra.rb` - tracks `coilyco-flight-deck/umbra` releases. Named `specgen` until the driver took the framework's name; the old formula is gone rather than aliased.
 - `Formula/agent-compose.rb` - tracks `coilyco-flight-deck/agent-compose` releases, and installs `acompose` alongside.
 - `Formula/aos.rb` - tracks `aos-v*` releases from `coilyco-flight-deck/agentic-os`, and installs `aoscompose` and `aosward` alongside.
 

@@ -17,8 +17,8 @@ source.
   the `aos` binary.
 - **[agent-compose](../Formula/agent-compose.rb)** - Core Roster context
   composition for native agent harnesses.
-- **[specgen](../Formula/specgen.rb)** - generates guarded CLIs from KDL policy
-  and committed API locks, from `coilyco-flight-deck/umbra`.
+- **[umbra](../Formula/umbra.rb)** - generates guarded CLIs from KDL policy and
+  committed API locks, from `coilyco-flight-deck/umbra`. Was `specgen` to v0.191.0.
 
 ## Release bump automation
 
