@@ -10,8 +10,6 @@ Tap with `brew tap coilyco-flight-deck/tap <forgejo-url>`, then install with
 verifies tagged release binaries from its upstream repo. None builds from
 source.
 
-- **[ward](../Formula/ward.rb)** - the contributor-facing umbra consumer, from
-  `coilyco-flight-deck/ward`.
 - **[aos](../Formula/aos.rb)** - the agent runtime composition root, from
   `coilyco-flight-deck/agentic-os`. Ships `aoscompose` and `aosward` alongside
   the `aos` binary.
