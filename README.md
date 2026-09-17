@@ -15,7 +15,6 @@ brew tap coilyco-flight-deck/tap https://forgejo.coilysiren.me/coilyco-flight-de
 Then install whichever tools you want:
 
 ```sh
-brew install coilyco-flight-deck/tap/ward
 brew install coilyco-flight-deck/tap/umbra
 brew install coilyco-flight-deck/tap/agent-compose
 brew install coilyco-flight-deck/tap/aos
@@ -27,10 +26,6 @@ here. Windows users take the same tools from the sibling
 
 ## What is in the tap
 
-- [`ward`](Formula/ward.rb) - governed execution layer for coding agents. Runs
-  agent work in fresh least-access containers and records a durable
-  issue-to-landing trail. From
-  [ward](https://forgejo.coilysiren.me/coilyco-flight-deck/ward).
 - [`umbra`](Formula/umbra.rb) - generates a standalone guarded CLI from KDL
   policy plus a committed lock, with no hand-written Go. From
   [umbra](https://forgejo.coilysiren.me/coilyco-flight-deck/umbra). Installed as
