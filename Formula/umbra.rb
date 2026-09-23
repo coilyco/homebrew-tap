@@ -1,27 +1,27 @@
 class Umbra < Formula
   desc "Generate guarded CLIs from KDL policy and committed API locks"
   homepage "https://forgejo.coilysiren.me/coilyco-flight-deck/umbra"
-  version "0.229.0"
+  version "0.230.0"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://forgejo.coilysiren.me/coilyco-flight-deck/umbra/releases/download/v0.229.0/umbra-darwin-amd64"
-      sha256 "182c1f752d952d9738730fdc5097bb945e38c5117636745b8bc4eaa48a69d2c0"
+      url "https://forgejo.coilysiren.me/coilyco-flight-deck/umbra/releases/download/v0.230.0/umbra-darwin-amd64"
+      sha256 "412b8e48b60e716f9b6c16788f239b7cd6db1982a4c49d1c9086fd1645db5c4b"
     end
     on_arm do
-      url "https://forgejo.coilysiren.me/coilyco-flight-deck/umbra/releases/download/v0.229.0/umbra-darwin-arm64"
-      sha256 "c298e50d0935b0978a11f5efae18386d8d460ae223aef4bfc77d5934b48acd0a"
+      url "https://forgejo.coilysiren.me/coilyco-flight-deck/umbra/releases/download/v0.230.0/umbra-darwin-arm64"
+      sha256 "148d090c2f2dedd4d95e3f1129bfda4d425e66f1b1dcab63329b23c622caff13"
     end
   end
   on_linux do
     on_intel do
-      url "https://forgejo.coilysiren.me/coilyco-flight-deck/umbra/releases/download/v0.229.0/umbra-linux-amd64"
-      sha256 "24aa46ba75868f331cb1303dec450835284c4590626a8990482bc34cdef449e8"
+      url "https://forgejo.coilysiren.me/coilyco-flight-deck/umbra/releases/download/v0.230.0/umbra-linux-amd64"
+      sha256 "0925dfa0fc521ed3fd3537204b08b1444959431cf27374c3e570a2b63630fc33"
     end
     on_arm do
-      url "https://forgejo.coilysiren.me/coilyco-flight-deck/umbra/releases/download/v0.229.0/umbra-linux-arm64"
-      sha256 "b05ab94673c6e10d95930300bb6c3316ac1dc3694934ac70e2d308b7062e83a9"
+      url "https://forgejo.coilysiren.me/coilyco-flight-deck/umbra/releases/download/v0.230.0/umbra-linux-arm64"
+      sha256 "890efd52b1b4f153d5d6c670ff51807fad2f9f93a66b4bf578683b73ea70ea4b"
     end
   end
 
