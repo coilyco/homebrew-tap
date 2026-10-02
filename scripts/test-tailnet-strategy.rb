@@ -21,6 +21,21 @@ class CurlDownloadStrategy
   def fetch(*)
     :fetched
   end
+
+  # Homebrew's own order: an uncached download is located by a request to its host,
+  # which is the call that hangs on a host that never answers.
+  def cached_location
+    return @cached_location if @cached_location.exist?
+
+    resolved_url_and_basename
+    @cached_location
+  end
+
+  private
+
+  def resolved_url_and_basename(*)
+    [url, "basename"]
+  end
 end
 
 def odie(message)
@@ -65,8 +80,17 @@ class TailnetDownloadStrategyTest < Minitest::Test
     assert_includes error.message, "only available on the coilyco tailnet"
   end
 
-  def test_a_cached_download_never_probes
-    assert_equal :fetched, strategy("http://127.0.0.1:1/x", cached: true).fetch
+  # Homebrew asks where a download is cached before it fetches, and that request has no
+  # short timeout, so a host that never answers hung the install before fetch ran.
+  def test_locating_an_uncached_download_on_a_silent_host_fails_fast_too
+    started = Process.clock_gettime(Process::CLOCK_MONOTONIC)
+    error = assert_raises(OdieError) { strategy("http://10.255.255.1:443/x").cached_location }
+    assert_operator Process.clock_gettime(Process::CLOCK_MONOTONIC) - started, :<, 3
+    assert_equal TailnetCurlDownloadStrategy::MESSAGE, error.message
+  end
+
+  def test_a_cached_download_is_located_without_probing
+    assert_kind_of Pathname, strategy("http://127.0.0.1:1/x", cached: true).cached_location
   end
 
   def test_the_message_names_both_audiences
