@@ -8,6 +8,9 @@ if ! command -v ruby >/dev/null 2>&1; then
   apt-get install -y -qq ruby
 fi
 
-for formula in Formula/*.rb; do
-  ruby -c "$formula"
+for ruby_file in Formula/*.rb lib/*.rb; do
+  ruby -c "$ruby_file"
 done
+
+# The tailnet download strategy, against stand-ins for Homebrew's classes.
+ruby scripts/test-tailnet-strategy.rb
