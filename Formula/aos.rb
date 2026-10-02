@@ -1,70 +1,70 @@
 class Aos < Formula
   desc "Agent runtime composition root for Agentic OS"
   homepage "https://forgejo.coilysiren.me/coilyco/agentic-os"
-  version "0.416.0"
+  version "0.417.0"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://forgejo.coilysiren.me/coilyco/agentic-os/releases/download/aos-v0.416.0/aos-darwin-arm64"
-      sha256 "7d29a22843ca8e68951841801378424585eb4427df4d9364f444828f857971b3"
+      url "https://forgejo.coilysiren.me/coilyco/agentic-os/releases/download/aos-v0.417.0/aos-darwin-arm64"
+      sha256 "28539d0e0ee4b043c1622249e001fc83faacf95dc3757e79f09f2b4e76e1a04c"
       resource "aoscompose" do
-        url "https://forgejo.coilysiren.me/coilyco/agentic-os/releases/download/aos-v0.416.0/aoscompose-darwin-arm64"
-        sha256 "7d29a22843ca8e68951841801378424585eb4427df4d9364f444828f857971b3"
+        url "https://forgejo.coilysiren.me/coilyco/agentic-os/releases/download/aos-v0.417.0/aoscompose-darwin-arm64"
+        sha256 "28539d0e0ee4b043c1622249e001fc83faacf95dc3757e79f09f2b4e76e1a04c"
       end
       resource "aosward" do
-        url "https://forgejo.coilysiren.me/coilyco/agentic-os/releases/download/aos-v0.416.0/aosward-darwin-arm64"
-        sha256 "7d29a22843ca8e68951841801378424585eb4427df4d9364f444828f857971b3"
+        url "https://forgejo.coilysiren.me/coilyco/agentic-os/releases/download/aos-v0.417.0/aosward-darwin-arm64"
+        sha256 "28539d0e0ee4b043c1622249e001fc83faacf95dc3757e79f09f2b4e76e1a04c"
       end
       resource "aosguard" do
-        url "https://forgejo.coilysiren.me/coilyco/agentic-os/releases/download/aos-v0.416.0/aosguard-darwin-arm64"
-        sha256 "f9ab26c00d30cfd888fb7ab86e63fb91c150c3186c0f0a46508a8a9fa99447a6"
+        url "https://forgejo.coilysiren.me/coilyco/agentic-os/releases/download/aos-v0.417.0/aosguard-darwin-arm64"
+        sha256 "877c9ced0ed0b0d536b41e86b088fb11a556eee7596104db8e9fb969b5f17409"
       end
       resource "aterm" do
-        url "https://forgejo.coilysiren.me/coilyco/agentic-os/releases/download/aos-v0.416.0/aterm-darwin-arm64"
-        sha256 "2aa7ed750c9d51c970ac586aacab0760cba4bc9af713a8ac23f7ee99bce0bd97"
+        url "https://forgejo.coilysiren.me/coilyco/agentic-os/releases/download/aos-v0.417.0/aterm-darwin-arm64"
+        sha256 "344a1e14c902d7861b91e3a6d4b4870094adeb9578ea5db8f12dd49397c7be18"
       end
     end
   end
   on_linux do
     on_intel do
-      url "https://forgejo.coilysiren.me/coilyco/agentic-os/releases/download/aos-v0.416.0/aos-linux-amd64"
-      sha256 "fd5717608fe0c2c072c4099d4567da1d10281e900ff6c86bc1c237751f4dcd4b"
+      url "https://forgejo.coilysiren.me/coilyco/agentic-os/releases/download/aos-v0.417.0/aos-linux-amd64"
+      sha256 "c2b0ef545266c8d8593066294c5dc04d73b6159fd5007c2830ef214ce0392419"
       resource "aoscompose" do
-        url "https://forgejo.coilysiren.me/coilyco/agentic-os/releases/download/aos-v0.416.0/aoscompose-linux-amd64"
-        sha256 "fd5717608fe0c2c072c4099d4567da1d10281e900ff6c86bc1c237751f4dcd4b"
+        url "https://forgejo.coilysiren.me/coilyco/agentic-os/releases/download/aos-v0.417.0/aoscompose-linux-amd64"
+        sha256 "c2b0ef545266c8d8593066294c5dc04d73b6159fd5007c2830ef214ce0392419"
       end
       resource "aosward" do
-        url "https://forgejo.coilysiren.me/coilyco/agentic-os/releases/download/aos-v0.416.0/aosward-linux-amd64"
-        sha256 "fd5717608fe0c2c072c4099d4567da1d10281e900ff6c86bc1c237751f4dcd4b"
+        url "https://forgejo.coilysiren.me/coilyco/agentic-os/releases/download/aos-v0.417.0/aosward-linux-amd64"
+        sha256 "c2b0ef545266c8d8593066294c5dc04d73b6159fd5007c2830ef214ce0392419"
       end
       resource "aosguard" do
-        url "https://forgejo.coilysiren.me/coilyco/agentic-os/releases/download/aos-v0.416.0/aosguard-linux-amd64"
-        sha256 "6d18c94c87904a11498f6867841a2c98c9a551bf8e0bfd10379e246e7093f21b"
+        url "https://forgejo.coilysiren.me/coilyco/agentic-os/releases/download/aos-v0.417.0/aosguard-linux-amd64"
+        sha256 "1013154a3184793c1ae6fb4315170b6dd9d972fc7b14947b7d7464cc25faedfa"
       end
       resource "aterm" do
-        url "https://forgejo.coilysiren.me/coilyco/agentic-os/releases/download/aos-v0.416.0/aterm-linux-amd64"
-        sha256 "35055e1da0f2c51c314e95b48b82a179eef64b3df3cf6af6201ffa1ebdd44e3d"
+        url "https://forgejo.coilysiren.me/coilyco/agentic-os/releases/download/aos-v0.417.0/aterm-linux-amd64"
+        sha256 "ca7d98cc11123322fd255eb6c5081062dab65f96633e13a85226d9316239320a"
       end
     end
     on_arm do
-      url "https://forgejo.coilysiren.me/coilyco/agentic-os/releases/download/aos-v0.416.0/aos-linux-arm64"
-      sha256 "ad37e76806cab10c854bfa46188f30580fb2a449f2f25ebf5f37c56c2377b804"
+      url "https://forgejo.coilysiren.me/coilyco/agentic-os/releases/download/aos-v0.417.0/aos-linux-arm64"
+      sha256 "3d2ae45cdd21354fc4fdff1c8dc4a2ef505ba5bf5a721cf12586f76e3d889bba"
       resource "aoscompose" do
-        url "https://forgejo.coilysiren.me/coilyco/agentic-os/releases/download/aos-v0.416.0/aoscompose-linux-arm64"
-        sha256 "ad37e76806cab10c854bfa46188f30580fb2a449f2f25ebf5f37c56c2377b804"
+        url "https://forgejo.coilysiren.me/coilyco/agentic-os/releases/download/aos-v0.417.0/aoscompose-linux-arm64"
+        sha256 "3d2ae45cdd21354fc4fdff1c8dc4a2ef505ba5bf5a721cf12586f76e3d889bba"
       end
       resource "aosward" do
-        url "https://forgejo.coilysiren.me/coilyco/agentic-os/releases/download/aos-v0.416.0/aosward-linux-arm64"
-        sha256 "ad37e76806cab10c854bfa46188f30580fb2a449f2f25ebf5f37c56c2377b804"
+        url "https://forgejo.coilysiren.me/coilyco/agentic-os/releases/download/aos-v0.417.0/aosward-linux-arm64"
+        sha256 "3d2ae45cdd21354fc4fdff1c8dc4a2ef505ba5bf5a721cf12586f76e3d889bba"
       end
       resource "aosguard" do
-        url "https://forgejo.coilysiren.me/coilyco/agentic-os/releases/download/aos-v0.416.0/aosguard-linux-arm64"
-        sha256 "b2503d594aae633001a0496e524834a3dfb2edeae44565b75702f885f44ede2c"
+        url "https://forgejo.coilysiren.me/coilyco/agentic-os/releases/download/aos-v0.417.0/aosguard-linux-arm64"
+        sha256 "07081da53cdcc5d8143f90829526b69073bf3e431adaa81c06615111b68ad78f"
       end
       resource "aterm" do
-        url "https://forgejo.coilysiren.me/coilyco/agentic-os/releases/download/aos-v0.416.0/aterm-linux-arm64"
-        sha256 "1de02452169997d147295ecedf6d4d09ea54ff9df23ef0c7d5ca87e0338f6e0e"
+        url "https://forgejo.coilysiren.me/coilyco/agentic-os/releases/download/aos-v0.417.0/aterm-linux-arm64"
+        sha256 "47f7ffa9d60dbb5e24926793e6bce074be7f61b62f057831609d907939ed578c"
       end
     end
   end
