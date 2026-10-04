@@ -1,6 +1,6 @@
 cask "ssm" do
-  version "0.1.0"
-  sha256 "2d1a0d0fd4dff9b44940f27c9dcc96bbcd4e28b7155bc420a2e8f5a14d208ae8"
+  version "0.1.1"
+  sha256 "d42952acb8cf184f41c6688a81add9618857fe357417d736e273cb0a4a59649d"
 
   url "https://github.com/coilyco/ssm-app/releases/download/v#{version}/SSM-#{version}-arm64.zip"
   name "SSM"
