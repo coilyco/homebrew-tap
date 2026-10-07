@@ -5,7 +5,7 @@ description: Homebrew tap for coilyco-flight-deck tools with automated formula u
 
 # repo-homebrew-tap
 
-Pointer to `~/projects/coilyco-flight-deck/homebrew-tap/`.
+Pointer to `~/projects/coilyco/homebrew-tap/`.
 
 - [`README.md`](../../../README.md) - what it is, quickstart, layout.
 - [`AGENTS.md`](../../../AGENTS.md) - agent-facing operating context for the repo.
