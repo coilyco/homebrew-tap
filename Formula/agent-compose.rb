@@ -3,37 +3,37 @@ require_relative "../lib/tailnet_download_strategy"
 class AgentCompose < Formula
   desc "Core Roster context composition for native agent harnesses"
   homepage "https://forgejo.coilysiren.me/coilyco-flight-deck/agent-compose"
-  version "2.213.0"
+  version "2.214.0"
   license "MIT"
 
   # The seed roster installs into the prefix. acompose prefers an editable
   # roster in the state directory, so an upgrade never overwrites one.
   resource "roster" do
-    url "https://forgejo.coilysiren.me/coilyco-flight-deck/agent-compose/releases/download/v2.213.0/agent-compose-roster.tar.gz", using: TailnetCurlDownloadStrategy
-    sha256 "353cd70fec8d5cfff3adf09fde3c6158acdc883ec1b44d6b69e465ec7300ab6a"
+    url "https://forgejo.coilysiren.me/coilyco-flight-deck/agent-compose/releases/download/v2.214.0/agent-compose-roster.tar.gz", using: TailnetCurlDownloadStrategy
+    sha256 "51c756136382c0aad879700becd4841bead55d0be7998eb6e1cc047719a0c0b0"
   end
 
   # housecast composes at build time and never runs here, so the composed set
   # ships rather than the data behind it.
   resource "bundles" do
-    url "https://forgejo.coilysiren.me/coilyco-flight-deck/agent-compose/releases/download/v2.213.0/agent-compose-bundles.tar.gz", using: TailnetCurlDownloadStrategy
-    sha256 "ce9a5ec493ccf5f13107d2924c01d204cb2dbf448c3cd879e980e36d7dd8fbce"
+    url "https://forgejo.coilysiren.me/coilyco-flight-deck/agent-compose/releases/download/v2.214.0/agent-compose-bundles.tar.gz", using: TailnetCurlDownloadStrategy
+    sha256 "14605251e2535d6aa6875688921a761cda55d1710dd7a08bcca410b524bbbf1e"
   end
 
   on_macos do
     on_arm do
-      url "https://forgejo.coilysiren.me/coilyco-flight-deck/agent-compose/releases/download/v2.213.0/agent-compose-darwin-arm64", using: TailnetCurlDownloadStrategy
-      sha256 "05777706bf7e5d91282d8de66d6eadc41b0ee4be427d29ab57f4c49d37d3b816"
+      url "https://forgejo.coilysiren.me/coilyco-flight-deck/agent-compose/releases/download/v2.214.0/agent-compose-darwin-arm64", using: TailnetCurlDownloadStrategy
+      sha256 "7293312435130092ca51c665740de5ed6c914b534516b86477b6667bff8a6042"
     end
   end
   on_linux do
     on_intel do
-      url "https://forgejo.coilysiren.me/coilyco-flight-deck/agent-compose/releases/download/v2.213.0/agent-compose-linux-amd64", using: TailnetCurlDownloadStrategy
-      sha256 "a64a1a98c9ca245e5840c89bacd4115e6a56888fc0f72b822e4c5b9abc965ac1"
+      url "https://forgejo.coilysiren.me/coilyco-flight-deck/agent-compose/releases/download/v2.214.0/agent-compose-linux-amd64", using: TailnetCurlDownloadStrategy
+      sha256 "0003495fec2a1501842e478eefc7083ad65a87a2acf78b0bc4c6ebe15d8c176b"
     end
     on_arm do
-      url "https://forgejo.coilysiren.me/coilyco-flight-deck/agent-compose/releases/download/v2.213.0/agent-compose-linux-arm64", using: TailnetCurlDownloadStrategy
-      sha256 "702d468dd4cd4a8275d1806aa1259b76521286fcc9dc2456b5f8ac730c11307e"
+      url "https://forgejo.coilysiren.me/coilyco-flight-deck/agent-compose/releases/download/v2.214.0/agent-compose-linux-arm64", using: TailnetCurlDownloadStrategy
+      sha256 "be63d0fcbbaf0748763b414525de1fa233db4cae7bf58d950e1cc2510e04932f"
     end
   end
 
