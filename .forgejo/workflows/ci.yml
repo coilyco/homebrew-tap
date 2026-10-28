@@ -1,10 +1,5 @@
-# Forgejo-canonical CI gate for the tap audit surface.
-#
-# `just audit` remains the canonical local command, but the pinned
-# agentic-os/dev-base image used by this repo does not ship Homebrew today, so
-# CI falls back to the smallest useful static guard: Ruby syntax checks for
-# every Formula file. Follow-up: swap this job back to `just audit` once
-# the image grows brew.
+# Static CI gate for the tap: a Ruby syntax check of every Formula file.
+# `just audit` is the local command, and the image ships no brew to run it.
 
 name: ci
 

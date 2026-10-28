@@ -60,7 +60,7 @@ consumed by upstream ref and never forked.
 <!-- BEGIN managed by agentic-os/scripts/apply-git-workflow.py -->
 ### Git workflow
 
-**This repo declares no `ward.workflow` lane.** Until it declares one in this file's frontmatter, the agent MUST work the `pull-request` shape: task branch, push, pull request, then stop. No direct push to `main`, and no agent merge.
+**This repo runs the `pull-request-and-merge` lane**, declared as `ward.workflow` in this file's frontmatter. The agent commits to a task branch, pushes it, opens a GitHub pull request, and **merges that pull request itself** once it is green. The author of the code is the one who merges it. Opening the pull request is a step, never the stopping point.
 
 The fleet runs one lane, and it authorizes the agent end to end. Pushing straight to `main` is over: `merge-remote-main` is retired, so no repo can declare its way back to one.
 
