@@ -1,6 +1,6 @@
 ---
 ward:
-  workflow: merge-remote-main
+  workflow: pull-request-and-merge
 ---
 # Agent instructions for `coilyco-flight-deck/homebrew-tap`
 
@@ -8,7 +8,7 @@ Orientation for fresh Claude / mobile sessions. Keep this short.
 
 ## Scope
 
-The centralized Homebrew tap for `coilyco-flight-deck/*` tools. Every `Formula/*.rb` file downloads and checksum-verifies tagged release binaries from its upstream forgejo repo. None builds from source.
+The centralized Homebrew tap for `coilyco-flight-deck/*` tools. Every `Formula/*.rb` file downloads and checksum-verifies tagged release binaries from its upstream release. None builds from source.
 
 ## Project shape
 
@@ -22,7 +22,7 @@ The `repo-recall`, `session-lattice`, `session-lattice-puller`, and `ward` formu
 
 ## Release
 
-Upstream repos cut a tag. Their release pipeline rewrites the matching formula here via the forgejo Contents API, refreshing the release-asset URLs and the per-platform checksums. Once the bump lands on `main`, `brew upgrade` picks it up. This repo holds no release pipeline of its own, so it is only ever the write target for the upstream ones.
+Upstream repos cut a tag. Their release pipeline rewrites the matching formula here via the Contents API, refreshing the release-asset URLs and the per-platform checksums. Once the bump lands on `main`, `brew upgrade` picks it up. This repo holds no release pipeline of its own, so it is only ever the write target for the upstream ones.
 
 ## Repo boundaries
 
@@ -48,7 +48,7 @@ Repository dev verbs run through the [`justfile`](justfile). Operator verbs (aws
 ## Cross-repo contracts
 
 Upstream `coilyco-flight-deck/*` repos rewrite their own formula here through
-the forgejo Contents API. This repo never reaches back into them.
+the Contents API. This repo never reaches back into them.
 
 ## Validation
 
@@ -57,13 +57,34 @@ consumed by upstream ref and never forked.
 
 ## Agent rules
 
+<!-- BEGIN managed by agentic-os/scripts/apply-git-workflow.py -->
+### Git workflow
+
+**This repo declares no `ward.workflow` lane.** Until it declares one in this file's frontmatter, the agent MUST work the `pull-request` shape: task branch, push, pull request, then stop. No direct push to `main`, and no agent merge.
+
+The fleet runs one lane, and it authorizes the agent end to end. Pushing straight to `main` is over: `merge-remote-main` is retired, so no repo can declare its way back to one.
+
+* `pull-request-and-merge` - the agent commits to a task branch, pushes it, opens a pull request, and merges that pull request itself once it is green.
+
+**Every lane slug names what the AGENT does, never what someone else does.** `pull-request-and-merge` carries the merge because the agent that authored the code merges its own pull request. `pull-request` drops `-and-merge` because the author stops at the pull request and the director merge lane takes over. Reading `pull-request-and-merge` as "someone else merges it later" inverts the two and leaves finished work sitting unmerged.
+
+**These actions are pre-authorized on every lane, and the agent MUST take them without asking first.** Committing, creating a branch, pushing a branch, pushing the lane's own destination, and opening a pull request are ordinary reversible work, not the destructive wall that earns a question. Stopping to ask is how a turn ends with the work stranded in a dirty worktree.
+
+* **ALWAYS commit** in-scope work and **ALWAYS push** it to the canonical remote before pausing, reporting a checkpoint, handing off, or ending a turn. A local-only commit is not a checkpoint.
+* **ALWAYS open the pull request** in the same turn as the branch's first push, on every lane except `remote-branch-only`. A pushed branch with no pull request is litter nobody reviews.
+* **NEVER `--no-verify`** and **NEVER force-push**. Those two are the real walls, and they stay closed.
+* **ALWAYS merge your own pull request on `pull-request-and-merge`**, in the same turn, as soon as it is green. Reporting it as open and awaiting someone is the failure this lane exists to prevent.
+* **A merge refused because the head branch is behind the base branch is yours to fix, never a reason to ask.** Update the branch yourself, with `gh pr update-branch <number> --repo <owner>/<repo>` or by merging `origin/main` into it and pushing, never by force. Wait for green, then merge with `gh pr merge <number> --repo <owner>/<repo> --squash`. The guarded `gh` refuses a pull-request verb that names no `--repo`.
+* **NEVER merge on `pull-request` or `remote-branch-only`.** Those two stop where they stop, and the director merge lane carries a `pull-request` from there.
+<!-- END managed by agentic-os/scripts/apply-git-workflow.py -->
+
 Use she/her for Kai. No em dashes, italics, or semicolons in prose. Name the
 actor in every action sentence.
 
 ## Git workflow
 
 - Commit to `main`, push after each commit. No PRs unless asked.
-- Canonical history lives on forgejo. The GitHub mirror, if any, stays PR-gated.
+- Canonical history lives on GitHub (COI-2945). The Forgejo copy is no longer mirrored from here.
 
 ## Commands
 
