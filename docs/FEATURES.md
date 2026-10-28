@@ -5,8 +5,8 @@ whenever a formula is added, removed, or materially reshaped.
 
 ## Formulae
 
-Tap with `brew tap coilyco-flight-deck/tap <forgejo-url>`, then install with
-`brew install coilyco-flight-deck/tap/<formula>`. Every formula downloads and
+Tap with `brew tap coilyco/tap`, then install with
+`brew install coilyco/tap/<formula>`. Every formula downloads and
 verifies tagged release binaries from its upstream repo. None builds from
 source.
 

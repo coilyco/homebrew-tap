@@ -5,24 +5,24 @@ tool installs by name from there. macOS and Linux.
 
 ## Install
 
-The tap lives on Forgejo rather than github.com, so brew cannot resolve the URL
-from the tap name. Spell it out once:
+The tap lives on GitHub, so brew resolves it from the tap name and nothing here
+needs the tailnet:
 
 ```sh
-brew tap coilyco-flight-deck/tap https://forgejo.coilysiren.me/coilyco-flight-deck/homebrew-tap
+brew tap coilyco/tap
 ```
 
 Then install whichever tools you want:
 
 ```sh
-brew install coilyco-flight-deck/tap/umbra
-brew install coilyco-flight-deck/tap/agent-compose
-brew install coilyco-flight-deck/tap/aos
+brew install coilyco/tap/umbra
+brew install coilyco/tap/agent-compose
+brew install coilyco/tap/aos
 ```
 
 `brew upgrade` picks up new versions once an upstream release lands its bump
 here. Windows users take the same tools from the sibling
-[scoop-bucket](https://forgejo.coilysiren.me/coilyco-flight-deck/scoop-bucket).
+[scoop-bucket](https://github.com/coilyco/scoop-bucket).
 
 ## What is in the tap
 
@@ -43,7 +43,7 @@ builds from source, so no toolchain is required to install.
 ## How a version bump lands here
 
 An upstream repo cuts a tag, and its own release pipeline rewrites the matching
-formula in this repo through the Forgejo Contents API, refreshing the
+formula in this repo through the Contents API, refreshing the
 release-asset URLs and the per-platform checksums. Once that bump lands on
 `main`, `brew upgrade` sees it.
 

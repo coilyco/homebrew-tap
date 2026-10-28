@@ -9,3 +9,6 @@ band = "small"
 # cannot form a single top-of-file comment block.
 [tool.agentic-os.code-comments]
 excludes = [".pre-commit-config.yaml"]
+
+[tool.agentic-os.git-workflow]
+forge = "github"
