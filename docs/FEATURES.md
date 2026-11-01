@@ -25,11 +25,11 @@ through the forgejo Contents API, rewriting the release-asset URLs and
 checksums of its matching formula. This repo holds no release pipeline of its
 own and is only ever the write target.
 
-## Forgejo CI
+## CI
 
-[.forgejo/workflows/ci.yml](../.forgejo/workflows/ci.yml) is the tap audit
-surface. The dev-base image ships no Homebrew, so it runs Ruby syntax checks
-across `Formula/*.rb` pending a move to `just audit`.
+[.github/workflows/ci.yml](../.github/workflows/ci.yml) is the tap audit
+surface. The hosted Ubuntu runner ships no Homebrew, so it runs Ruby syntax checks
+across `Formula/*.rb` and the download-strategy test pending a move to `just audit`.
 
 ## See also
 
