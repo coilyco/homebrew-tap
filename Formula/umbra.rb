@@ -1,27 +1,27 @@
 class Umbra < Formula
   desc "Generate guarded CLIs from KDL policy and committed API locks"
   homepage "https://github.com/coilyco/umbra"
-  version "0.261.0"
+  version "0.262.0"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/coilyco/umbra/releases/download/v0.261.0/umbra-darwin-amd64"
-      sha256 "9b3eac8431ad66ba7b7dd63606435c34e7fbef50f4dd660c3019a99900da23de"
+      url "https://github.com/coilyco/umbra/releases/download/v0.262.0/umbra-darwin-amd64"
+      sha256 "4b6ae512c9b6a90aaaf535a06df9b5a0ec23367d5b1d52f84e590c526efd0c52"
     end
     on_arm do
-      url "https://github.com/coilyco/umbra/releases/download/v0.261.0/umbra-darwin-arm64"
-      sha256 "39a87a2ed016cdef64172458d7786f578689e1b6dccfb3704cd4a68e35760832"
+      url "https://github.com/coilyco/umbra/releases/download/v0.262.0/umbra-darwin-arm64"
+      sha256 "89688ef7c1ed2ae9681652469ed3556b6d54d79a82fbfb9a3e83eea03da26eae"
     end
   end
   on_linux do
     on_intel do
-      url "https://github.com/coilyco/umbra/releases/download/v0.261.0/umbra-linux-amd64"
-      sha256 "0aac2da10576f659a1b8b6a12c5b366fa5f4ad5b2ea93fa14e05b021d272cb68"
+      url "https://github.com/coilyco/umbra/releases/download/v0.262.0/umbra-linux-amd64"
+      sha256 "706c030d10e9b6f6439b4042d49e7ea4de242365c12fb26a10dcb5a1ab47a9ce"
     end
     on_arm do
-      url "https://github.com/coilyco/umbra/releases/download/v0.261.0/umbra-linux-arm64"
-      sha256 "ff4df5fc67c0b9dfed3f5b537537f49d30f608c8a9d35695de82b21fc5b5e120"
+      url "https://github.com/coilyco/umbra/releases/download/v0.262.0/umbra-linux-arm64"
+      sha256 "b5ccc9dfcfba4575c3d27e5c612d4897b3cd62ff1bcdd268bbb29da12794cd1b"
     end
   end
 
