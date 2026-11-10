@@ -14,3 +14,6 @@ done
 
 # The tailnet download strategy, against stand-ins for Homebrew's classes.
 ruby scripts/test-tailnet-strategy.rb
+
+# The private release strategy, against stand-ins for Homebrew and the GitHub API.
+ruby scripts/test-private-release-strategy.rb
