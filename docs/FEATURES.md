@@ -14,7 +14,8 @@ source.
   `coilyco-flight-deck/agentic-os`. Ships `aoscompose` and `aosward` alongside
   the `aos` binary.
 - **[agent-compose](../Formula/agent-compose.rb)** - Core Roster context
-  composition for native agent harnesses.
+  composition for native agent harnesses, from a private release through
+  Homebrew's own GitHub credentials ([build notes](homebrew-build.md)).
 - **[umbra](../Formula/umbra.rb)** - generates guarded CLIs from KDL policy and
   committed API locks, from `coilyco-flight-deck/umbra`. Was `specgen` to v0.191.0.
 

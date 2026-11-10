@@ -1,36 +1,43 @@
+require_relative "../lib/private_github_release_download_strategy"
+
 class AgentCompose < Formula
   desc "Core Roster context composition for native agent harnesses"
-  homepage "https://github.com/coilyco/agent-compose"
-  version "2.220.0"
+  homepage "https://github.com/coilyco/treehouse-servers"
+  version "2.225.0"
   license "MIT"
 
-  # The seed roster installs into the prefix. acompose prefers an editable
-  # roster in the state directory, so an upgrade never overwrites one.
+  # Private release, read with Homebrew's own GitHub credentials. COI-3302.
+  # The seed roster installs into the prefix, so upgrades keep an edited one.
   resource "roster" do
-    url "https://github.com/coilyco/agent-compose/releases/download/v2.220.0/agent-compose-roster.tar.gz"
-    sha256 "ef7c31b352077eb7e472c48b5f7b5b223f0ae89315b21a9972826846c44321a1"
+    url "https://github.com/coilyco/treehouse-servers/releases/download/agent-compose-v2.225.0/agent-compose-roster.tar.gz",
+    using: PrivateGitHubReleaseDownloadStrategy
+    sha256 "5d4b108703bf512b35cff440f34c1d088152cbdab3c64c27b49f631a13fb5bcb"
   end
 
   # housecast composes at build time and never runs here, so the composed set
   # ships rather than the data behind it.
   resource "bundles" do
-    url "https://github.com/coilyco/agent-compose/releases/download/v2.220.0/agent-compose-bundles.tar.gz"
-    sha256 "c737ed5da63cec89b3ea190c2d2e9b18351b17e7792645f72efb8c50ae31c487"
+    url "https://github.com/coilyco/treehouse-servers/releases/download/agent-compose-v2.225.0/agent-compose-bundles.tar.gz",
+    using: PrivateGitHubReleaseDownloadStrategy
+    sha256 "5ccba20e349afcf00832f20fb7d47c88b0f49be78ffb1def332a5836cbb3e704"
   end
 
   on_macos do
     depends_on arch: :arm64
-    url "https://github.com/coilyco/agent-compose/releases/download/v2.220.0/agent-compose-darwin-arm64"
-    sha256 "e233a5729a409d079b4096511a36812eb7b0df8fd545b5c80eb8698eb64a7640"
+    url "https://github.com/coilyco/treehouse-servers/releases/download/agent-compose-v2.225.0/agent-compose-darwin-arm64",
+    using: PrivateGitHubReleaseDownloadStrategy
+    sha256 "73952c76420e04edf73cc68a36d2fd55f1fd3a2f340d81cad9d597046cf7f52c"
   end
   on_linux do
     on_intel do
-      url "https://github.com/coilyco/agent-compose/releases/download/v2.220.0/agent-compose-linux-amd64"
-      sha256 "a63307f0646953e93c5b363a5f10ea959a7b8c2b803afd4aa5bd73221de563b7"
+      url "https://github.com/coilyco/treehouse-servers/releases/download/agent-compose-v2.225.0/agent-compose-linux-amd64",
+      using: PrivateGitHubReleaseDownloadStrategy
+      sha256 "4172c09ce130771da2908f60cb253436bdc0df58643c56b5c5c7ad292c4cedca"
     end
     on_arm do
-      url "https://github.com/coilyco/agent-compose/releases/download/v2.220.0/agent-compose-linux-arm64"
-      sha256 "5df8ea44f12114abe569068ab27281619bcf8e9a9c4a67ee0b2f225fdc97900b"
+      url "https://github.com/coilyco/treehouse-servers/releases/download/agent-compose-v2.225.0/agent-compose-linux-arm64",
+      using: PrivateGitHubReleaseDownloadStrategy
+      sha256 "e2a0aa11cd06cc7abb62d705bd4eccf480600cca6cfbae8daee4d6028fa46eed"
     end
   end
 

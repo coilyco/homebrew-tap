@@ -9,3 +9,7 @@ band = "small"
 # cannot form a single top-of-file comment block.
 [tool.agentic-os.code-comments]
 excludes = [".pre-commit-config.yaml"]
+
+# aos.rb is rendered by agentic-os, whose docs it cites.
+[tool.agentic-os.source-doc-refs]
+excludes = ["Formula/aos.rb"]
