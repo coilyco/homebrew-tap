@@ -1,57 +1,57 @@
 class Aos < Formula
   desc "Agent runtime composition root for Agentic OS"
   homepage "https://github.com/coilyco/agentic-os"
-  version "0.583.0"
+  version "0.584.0"
   license "MIT"
 
   on_macos do
     depends_on arch: :arm64
-    url "https://github.com/coilyco/agentic-os/releases/download/aos-v0.583.0/aos-darwin-arm64"
-    sha256 "4ee6bebda13d7b60852db3e7cec683303d39c5300ab9b6014d217af9e69c44b6"
+    url "https://github.com/coilyco/agentic-os/releases/download/aos-v0.584.0/aos-darwin-arm64"
+    sha256 "fd9212a86ae89c794e2e00d1e682fefad30f382ecd0aab1c05683775a84bb12e"
     resource "aoscompose" do
-      url "https://github.com/coilyco/agentic-os/releases/download/aos-v0.583.0/aoscompose-darwin-arm64"
-      sha256 "4ee6bebda13d7b60852db3e7cec683303d39c5300ab9b6014d217af9e69c44b6"
+      url "https://github.com/coilyco/agentic-os/releases/download/aos-v0.584.0/aoscompose-darwin-arm64"
+      sha256 "fd9212a86ae89c794e2e00d1e682fefad30f382ecd0aab1c05683775a84bb12e"
     end
     resource "aosguard" do
-      url "https://github.com/coilyco/agentic-os/releases/download/aos-v0.583.0/aosguard-darwin-arm64"
-      sha256 "9f114afa38aea9a8c9056f6da45df325c14b5abae564b320473ee68d0736cf1b"
+      url "https://github.com/coilyco/agentic-os/releases/download/aos-v0.584.0/aosguard-darwin-arm64"
+      sha256 "59c5c8adceb40cc9544179880615cdfb345e4410bdecea5da595857a2d544f00"
     end
     resource "aterm" do
-      url "https://github.com/coilyco/agentic-os/releases/download/aos-v0.583.0/aterm-darwin-arm64.app.tar.gz", using: :nounzip
-      sha256 "88e040792a2544c64225db6efa9b95fe013f5ab06dfe1dac825768cf5a748592"
+      url "https://github.com/coilyco/agentic-os/releases/download/aos-v0.584.0/aterm-darwin-arm64.app.tar.gz", using: :nounzip
+      sha256 "4917f29c82e9c64e652403d81a149f9564c754c6d2add141e3f79ebc1fa1ffd1"
     end
   end
   on_linux do
     on_intel do
-      url "https://github.com/coilyco/agentic-os/releases/download/aos-v0.583.0/aos-linux-amd64"
-      sha256 "68e0ff69a46e85f3da5f0786914b910edcc002f52c49be93101b1443e47baff5"
+      url "https://github.com/coilyco/agentic-os/releases/download/aos-v0.584.0/aos-linux-amd64"
+      sha256 "e4b8dc26918e8ec7cd117ec2fb74d0df5bfa877547cf1953f98ba64d59299206"
       resource "aoscompose" do
-        url "https://github.com/coilyco/agentic-os/releases/download/aos-v0.583.0/aoscompose-linux-amd64"
-        sha256 "68e0ff69a46e85f3da5f0786914b910edcc002f52c49be93101b1443e47baff5"
+        url "https://github.com/coilyco/agentic-os/releases/download/aos-v0.584.0/aoscompose-linux-amd64"
+        sha256 "e4b8dc26918e8ec7cd117ec2fb74d0df5bfa877547cf1953f98ba64d59299206"
       end
       resource "aosguard" do
-        url "https://github.com/coilyco/agentic-os/releases/download/aos-v0.583.0/aosguard-linux-amd64"
-        sha256 "92d5955c2fdeedae577699241c72fe5069f7fb76539524e97277803d21497cbe"
+        url "https://github.com/coilyco/agentic-os/releases/download/aos-v0.584.0/aosguard-linux-amd64"
+        sha256 "f70ceb1756cfcab46c1bb1e823fa7ca5468a39907b3ee7afe023aa51912ee985"
       end
       resource "aterm" do
-        url "https://github.com/coilyco/agentic-os/releases/download/aos-v0.583.0/aterm-linux-amd64"
-        sha256 "8ed8ecaec1392c64e44215aeb3953b993aa6058dc592b5d013280b81aee7daa4"
+        url "https://github.com/coilyco/agentic-os/releases/download/aos-v0.584.0/aterm-linux-amd64"
+        sha256 "4bedea80a2f3c12f3bf7c68fc52eb25924a65d333418942faf69ecf786982b12"
       end
     end
     on_arm do
-      url "https://github.com/coilyco/agentic-os/releases/download/aos-v0.583.0/aos-linux-arm64"
-      sha256 "3c3892d7d93009ec8175b2b37f3fcf0a08a37158cb301e9c2ff958d64f62f2e4"
+      url "https://github.com/coilyco/agentic-os/releases/download/aos-v0.584.0/aos-linux-arm64"
+      sha256 "637e89227a515b52dd23936bcd3353022790ca0fc622491568f358f65822d587"
       resource "aoscompose" do
-        url "https://github.com/coilyco/agentic-os/releases/download/aos-v0.583.0/aoscompose-linux-arm64"
-        sha256 "3c3892d7d93009ec8175b2b37f3fcf0a08a37158cb301e9c2ff958d64f62f2e4"
+        url "https://github.com/coilyco/agentic-os/releases/download/aos-v0.584.0/aoscompose-linux-arm64"
+        sha256 "637e89227a515b52dd23936bcd3353022790ca0fc622491568f358f65822d587"
       end
       resource "aosguard" do
-        url "https://github.com/coilyco/agentic-os/releases/download/aos-v0.583.0/aosguard-linux-arm64"
-        sha256 "bd8f03949bc3f05f346f08a383a67dfcfb0b0e72e5d4331b6d64babe3210e798"
+        url "https://github.com/coilyco/agentic-os/releases/download/aos-v0.584.0/aosguard-linux-arm64"
+        sha256 "0de38b24e378ba9580c5e5ed8ae7e9c6597b808d8cc692a93912b06530b4a2cb"
       end
       resource "aterm" do
-        url "https://github.com/coilyco/agentic-os/releases/download/aos-v0.583.0/aterm-linux-arm64"
-        sha256 "344b15b0507233666b83067950375adc7c7773550fe11f2a2c4950474fe38595"
+        url "https://github.com/coilyco/agentic-os/releases/download/aos-v0.584.0/aterm-linux-arm64"
+        sha256 "dbdf6124746fac645f57f25627959e2e477103b80887c1a7836afd2b585a0035"
       end
     end
   end
